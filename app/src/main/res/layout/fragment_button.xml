@@ -91,4 +91,88 @@
         app:layout_constraintTop_toTopOf="@id/btnOutlined"
         app:layout_constraintBottom_toBottomOf="@+id/btnOutlined"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTextEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_text_enabled"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOutlined"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+    <TextView
+        android:id="@+id/tvTextEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_text_enabled"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/btnTextEnable"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTextEnable"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnIconEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_icon_enabled"
+        app:icon="@drawable/ic_zoom_in"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTextEnable" />
+
+    <TextView
+        android:id="@+id/tvIconEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_icon_enabled"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/btnIconEnable"
+        app:layout_constraintBottom_toBottomOf="@+id/btnIconEnable"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnIconTextEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_icon_text_enabled"
+        app:icon="@drawable/ic_zoom_in"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnIconEnable"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+    <TextView
+        android:id="@+id/tvIconTextEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_icon_text_enabled"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/btnIconTextEnable"
+        app:layout_constraintBottom_toBottomOf="@+id/btnIconTextEnable"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCuston"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_custom"
+        android:textColor="@android:color/holo_blue_dark"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@android:color/holo_blue_dark"
+        app:rippleColor="@android:color/holo_blue_bright"
+        app:cornerRadius="@dimen/common_padding_default"
+        app:strokeColor="@android:color/holo_blue_dark"
+        app:strokeWidth="@dimen/common_padding_nano"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnIconTextEnable"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    <TextView
+        android:id="@+id/tvCuston"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_custom"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/btnCuston"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCuston"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
