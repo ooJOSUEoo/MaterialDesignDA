@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alain.cursos.mdcomponents.adapters.ComponentAdapter;
+import com.alain.cursos.mdcomponents.fragments.BottonNavigationBarFragment;
 import com.alain.cursos.mdcomponents.utils.Component;
 import com.alain.cursos.mdcomponents.utils.Constants;
 import com.alain.cursos.mdcomponents.utils.OnClickListener;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.alain.cursos.mdcomponents.fragments.ButtonFragment;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private void configAdapter() {
         mAdapter = new ComponentAdapter(new ArrayList<>(), this);
         mAdapter.add(ButtonFragment.getmInstance());
+        mAdapter.add(BottonNavigationBarFragment.getmInstance());
     }
 
     private void configRecyclerView() {
