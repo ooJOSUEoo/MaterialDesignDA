@@ -104,6 +104,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCapitalLetter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_padding_default"
@@ -112,9 +113,13 @@
         app:boxCornerRadiusBottomEnd="@dimen/circle_radius"
         app:boxCornerRadiusTopEnd="@dimen/circle_radius"
         app:boxCornerRadiusTopStart="@dimen/circle_radius"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_format_size"
+        app:endIconTint="@color/colorPrimary"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCapitalLetter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"/>
