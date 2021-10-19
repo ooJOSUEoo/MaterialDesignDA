@@ -1,6 +1,5 @@
 package com.alain.cursos.mdcomponents.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -80,7 +79,7 @@ public class TextFieldFragment extends Fragment {
             }
         });
 
-        return view
+        return view;
     }
 
     @Override

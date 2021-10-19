@@ -1,4 +1,4 @@
-package com.alain.cursos.mdcomponents.utils;
+ package com.alain.cursos.mdcomponents.utils;
 
 /* *
  * Project: MD Components from com.alain.cursos.mdcomponents.utils
@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.alain.cursos.mdcomponents.fragments.BottonNavigationBarFragment;
 import com.alain.cursos.mdcomponents.fragments.ButtonFragment;
+import com.alain.cursos.mdcomponents.fragments.FloatingActionButtonFragment;
 import com.alain.cursos.mdcomponents.fragments.SnackBarFragment;
 import com.alain.cursos.mdcomponents.fragments.TextFieldFragment;
 
@@ -50,6 +51,10 @@ public class CommonUtils {
 
                 break;
 
+            case FloatingActionButtonFragment.TAG:
+                fragment = new FloatingActionButtonFragment();
+
+                break;
 
         }
 
