@@ -34,7 +34,7 @@ public class CommonUtils {
 
             //STATIC
             case BottonNavigationBarFragment.TAG:
-                fragment=new BottonNavigationBarFragment();
+                fragment = new BottonNavigationBarFragment();
 
                 break;
 

@@ -18,7 +18,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        //min 125 011 Bottom Navigation_ Personalización y Badge.mp4
     }
 }
 
