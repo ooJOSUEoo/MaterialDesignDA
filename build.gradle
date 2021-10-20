@@ -18,6 +18,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
         //min 125 011 Bottom Navigation_ Personalización y Badge.mp4
     }
 }
