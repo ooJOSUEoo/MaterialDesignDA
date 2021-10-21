@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.alain.cursos.mdcomponents.fragments.BottonNavigationBarFragment;
 import com.alain.cursos.mdcomponents.fragments.ButtonFragment;
+import com.alain.cursos.mdcomponents.fragments.CardFragment;
 import com.alain.cursos.mdcomponents.fragments.CheckBoxFragment;
 import com.alain.cursos.mdcomponents.fragments.FloatingActionButtonFragment;
 import com.alain.cursos.mdcomponents.fragments.SnackBarFragment;
@@ -43,6 +44,11 @@ public class CommonUtils {
 
             case CheckBoxFragment.TAG:
                 fragment = new CheckBoxFragment();
+
+                break;
+
+            case CardFragment.TAG:
+                fragment = new CardFragment();
 
                 break;
 
