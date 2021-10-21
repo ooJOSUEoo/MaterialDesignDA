@@ -1,22 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.CardFragment"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/common_padding_default">
-    
+    android:paddingBottom="@dimen/common_padding_default"
+    tools:context=".fragments.CardFragment">
+
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/common_padding_min"
-        android:layout_marginEnd="@dimen/common_padding_min"
         android:layout_marginTop="@dimen/common_padding_min"
+        android:layout_marginEnd="@dimen/common_padding_min"
         android:clickable="true"
         android:focusable="true">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/common_padding_none"
+            android:paddingTop="@dimen/common_padding_default"
+            android:paddingEnd="@dimen/common_padding_default">
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCardSmall"
+                android:layout_width="@dimen/card_img_size"
+                android:layout_height="@dimen/card_img_size"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFirst"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:paddingStart="@dimen/common_padding_min"
+                android:paddingEnd="@dimen/common_padding_min"
+                android:text="@string/status_enabled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgCardSmall" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSecond"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_default"
+                app:layout_constraintBottom_toBottomOf="@id/btnFirst"
+                app:layout_constraintStart_toEndOf="@id/btnFirst"
+                app:layout_constraintTop_toTopOf="@id/btnFirst" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_default"
+                android:layout_marginEnd="@dimen/common_padding_default"
+                android:text="@string/card_title_demo"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                app:layout_constraintEnd_toStartOf="@id/imgCardSmall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/card_message_demo_small"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintBottom_toTopOf="@id/btnFirst"
+                app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="@id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
