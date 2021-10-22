@@ -125,6 +125,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/imgCardLarge" />
 
+            <RatingBar
+                android:id="@+id/rsScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="4.5"
+                app:firstBaselineToTopHeight="@dimen/card_baseline_ratingBar"
+                app:layout_constraintStart_toStartOf="@id/tvTitleLarge"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleLarge"
+                style="?ratingBarStyleSmall"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>

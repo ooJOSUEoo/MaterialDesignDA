@@ -16,4 +16,5 @@
     <dimen name="card_img_size">80dp</dimen>
     <dimen name="common_padding_middle">24dp</dimen>
     <dimen name="card_baseline_topTitle">44dp</dimen>
+    <dimen name="card_baseline_ratingBar">24dp</dimen>
 </resources>
