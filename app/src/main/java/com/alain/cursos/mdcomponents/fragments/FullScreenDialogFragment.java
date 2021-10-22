@@ -4,29 +4,39 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toolbar;
 
-import androidx.fragment.app.Fragment;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 
 import com.alain.cursos.mdcomponents.R;
-import com.alain.cursos.mdcomponents.utils.Component;
-import com.alain.cursos.mdcomponents.utils.Constants;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public class FullScreenDialogFragment extends Fragment {
+public class FullScreenDialogFragment extends DialogFragment {
 
-    public static final String TAG = "Dialog";
+    public static final String TAG = "FullScreenDialogFragment";
 
-    private static Component mInstance;
+    //private static Component mInstance;
     Unbinder mUmbinder;
 
-    public static Component getmInstance(){
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
+    /*public static Component getmInstance(){
         mInstance = new Component();
         mInstance.setName(TAG);
         mInstance.setPhotoRes(R.drawable.img_dialog_mobile_alert);
         mInstance.setType(Constants.STATIC);
         return mInstance;
+    }*/
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setStyle(DialogFragment.STYLE_NORMAL, R.style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen);
     }
 
     public FullScreenDialogFragment() {

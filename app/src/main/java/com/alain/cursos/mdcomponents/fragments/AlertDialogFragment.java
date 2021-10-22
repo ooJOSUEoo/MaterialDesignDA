@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.alain.cursos.mdcomponents.R;
 import com.alain.cursos.mdcomponents.utils.Component;
@@ -91,6 +92,8 @@ public class AlertDialogFragment extends Fragment {
 
     @OnClick(R.id.btnDialogFullScreen)
     public void onFullScreenClicked(){
-
+        FullScreenDialogFragment dialogFragment = new FullScreenDialogFragment();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        dialogFragment.show(transaction, FullScreenDialogFragment.TAG);
     }
 }
