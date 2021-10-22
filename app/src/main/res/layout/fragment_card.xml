@@ -101,17 +101,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnFirstLarge"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/common_padding_min"
-                android:layout_marginBottom="@dimen/common_padding_min"
-                android:text="@string/status_enabled"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
             <TextView
                 android:id="@+id/tvTitleLarge"
                 android:layout_width="0dp"
@@ -177,6 +166,57 @@
                 app:layout_constraintEnd_toEndOf="@id/tvTitleLarge"
                 app:layout_constraintStart_toStartOf="@id/tvTitleLarge"
                 app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFirstLarge"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_min"
+                android:layout_marginBottom="@dimen/common_padding_min"
+                android:text="@string/status_enabled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chpFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_padding_container_variant"
+                android:layout_marginBottom="@dimen/card_padding_container_variant2"
+                android:text="@string/card_chip_demo"
+                app:layout_constraintBottom_toTopOf="@id/btnFirstLarge"
+                app:layout_constraintStart_toStartOf="@id/tvTitleLarge"
+                app:layout_constraintTop_toBottomOf="@id/tvSubtitleLarge" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chpSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_min"
+                android:text="@string/card_chip_demo"
+                app:layout_constraintBottom_toBottomOf="@id/chpFirst"
+                app:layout_constraintStart_toEndOf="@id/chpFirst"
+                app:layout_constraintTop_toTopOf="@id/chpFirst" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chpThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_min"
+                android:text="@string/card_chip_demo"
+                app:layout_constraintBottom_toBottomOf="@id/chpFirst"
+                app:layout_constraintStart_toEndOf="@id/chpSecond"
+                app:layout_constraintTop_toTopOf="@id/chpFirst" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_min"
+                android:text="@string/card_chip_demo"
+                app:layout_constraintBottom_toBottomOf="@id/chpFirst"
+                app:layout_constraintStart_toEndOf="@id/chpThird"
+                app:layout_constraintTop_toTopOf="@id/chpFirst" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
