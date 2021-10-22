@@ -8,17 +8,18 @@
  * More info: https://www.udemy.com/especialidad-en-firebase-para-android-con-mvp-profesional/
  */
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+ import androidx.appcompat.app.AppCompatActivity;
+ import androidx.fragment.app.Fragment;
 
-import com.alain.cursos.mdcomponents.fragments.BottonNavigationBarFragment;
-import com.alain.cursos.mdcomponents.fragments.ButtonFragment;
-import com.alain.cursos.mdcomponents.fragments.CardFragment;
-import com.alain.cursos.mdcomponents.fragments.CheckBoxFragment;
-import com.alain.cursos.mdcomponents.fragments.FloatingActionButtonFragment;
-import com.alain.cursos.mdcomponents.fragments.MenuFragment;
-import com.alain.cursos.mdcomponents.fragments.SnackBarFragment;
-import com.alain.cursos.mdcomponents.fragments.TextFieldFragment;
+ import com.alain.cursos.mdcomponents.fragments.AlertDialogFragment;
+ import com.alain.cursos.mdcomponents.fragments.BottonNavigationBarFragment;
+ import com.alain.cursos.mdcomponents.fragments.ButtonFragment;
+ import com.alain.cursos.mdcomponents.fragments.CardFragment;
+ import com.alain.cursos.mdcomponents.fragments.CheckBoxFragment;
+ import com.alain.cursos.mdcomponents.fragments.FloatingActionButtonFragment;
+ import com.alain.cursos.mdcomponents.fragments.MenuFragment;
+ import com.alain.cursos.mdcomponents.fragments.SnackBarFragment;
+ import com.alain.cursos.mdcomponents.fragments.TextFieldFragment;
 
 public class CommonUtils {
 
@@ -73,6 +74,11 @@ public class CommonUtils {
 
             case MenuFragment.TAG:
                 fragment = new MenuFragment();
+                break;
+
+            case AlertDialogFragment.TAG:
+                fragment = new AlertDialogFragment();
+
                 break;
 
         }

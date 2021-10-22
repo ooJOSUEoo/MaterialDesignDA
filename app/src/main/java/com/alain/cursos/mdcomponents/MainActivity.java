@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alain.cursos.mdcomponents.adapters.ComponentAdapter;
+import com.alain.cursos.mdcomponents.fragments.AlertDialogFragment;
 import com.alain.cursos.mdcomponents.fragments.BottonNavigationBarFragment;
 import com.alain.cursos.mdcomponents.fragments.ButtonFragment;
 import com.alain.cursos.mdcomponents.fragments.CardFragment;
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         mAdapter.add(CheckBoxFragment.getmInstance());
         mAdapter.add(CardFragment.getmInstance());
         mAdapter.add(MenuFragment.getmInstance());
+        mAdapter.add(AlertDialogFragment.getmInstance());
         mAdapter.reverse();
     }
 
