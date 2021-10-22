@@ -10,8 +10,10 @@ import androidx.fragment.app.Fragment;
 import com.alain.cursos.mdcomponents.R;
 import com.alain.cursos.mdcomponents.utils.Component;
 import com.alain.cursos.mdcomponents.utils.Constants;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 
@@ -48,5 +50,28 @@ public class AlertDialogFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         mUmbinder.unbind();
+    }
+
+    @OnClick(R.id.btnDialogInfo)
+    public void onInfoClicked(){
+        new MaterialAlertDialogBuilder(getActivity())
+                .setTitle(R.string.card_message_demo_small)
+                .setPositiveButton(R.string.dialog_ok, null)
+                .show();
+    }
+
+    @OnClick(R.id.btnDialogChooser)
+    public void onChooserClicked(){
+
+    }
+
+    @OnClick(R.id.btnDialogConfirm)
+    public void onConfirmClicked(){
+
+    }
+
+    @OnClick(R.id.btnDialogFullScreen)
+    public void onFullScreenClicked(){
+
     }
 }
