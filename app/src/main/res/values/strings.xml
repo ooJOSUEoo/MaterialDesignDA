@@ -144,4 +144,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="menu_popup_menu">Popup  Menu</string>
+    <string name="menu_hint_autocomplete">Autocomplete</string>
 </resources>
