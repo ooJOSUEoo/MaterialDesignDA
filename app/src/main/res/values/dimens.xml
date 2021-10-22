@@ -17,4 +17,7 @@
     <dimen name="common_padding_middle">24dp</dimen>
     <dimen name="card_baseline_topTitle">44dp</dimen>
     <dimen name="card_baseline_ratingBar">24dp</dimen>
+    <dimen name="card_baseline_secondary">32dp</dimen>
+    <dimen name="card_baseline_message">36dp</dimen>
+    <dimen name="card_baseline_subtitle">36dp</dimen>
 </resources>
