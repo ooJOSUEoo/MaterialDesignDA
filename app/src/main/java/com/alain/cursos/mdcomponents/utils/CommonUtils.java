@@ -12,6 +12,7 @@
  import androidx.fragment.app.Fragment;
 
  import com.alain.cursos.mdcomponents.fragments.AlertDialogFragment;
+ import com.alain.cursos.mdcomponents.fragments.AppBarFragment;
  import com.alain.cursos.mdcomponents.fragments.BottonNavigationBarFragment;
  import com.alain.cursos.mdcomponents.fragments.ButtonFragment;
  import com.alain.cursos.mdcomponents.fragments.CardFragment;
@@ -78,6 +79,11 @@ public class CommonUtils {
 
             case AlertDialogFragment.TAG:
                 fragment = new AlertDialogFragment();
+
+                break;
+
+            case AppBarFragment.TAG:
+                fragment = new AppBarFragment();
 
                 break;
 
