@@ -194,7 +194,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/common_padding_min"
+                android:checkable="true"
                 android:text="@string/card_chip_demo"
+                app:checkedIconVisible="false"
                 app:layout_constraintBottom_toBottomOf="@id/chpFirst"
                 app:layout_constraintStart_toEndOf="@id/chpFirst"
                 app:layout_constraintTop_toTopOf="@id/chpFirst" />
@@ -205,6 +207,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/common_padding_min"
                 android:text="@string/card_chip_demo"
+                app:closeIconEnabled="true"
                 app:layout_constraintBottom_toBottomOf="@id/chpFirst"
                 app:layout_constraintStart_toEndOf="@id/chpSecond"
                 app:layout_constraintTop_toTopOf="@id/chpFirst" />
@@ -213,7 +216,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/common_padding_min"
+                android:checkable="true"
                 android:text="@string/card_chip_demo"
+                app:checkedIcon="@drawable/ic_favorite"
+                app:closeIconEnabled="true"
                 app:layout_constraintBottom_toBottomOf="@id/chpFirst"
                 app:layout_constraintStart_toEndOf="@id/chpThird"
                 app:layout_constraintTop_toTopOf="@id/chpFirst" />
