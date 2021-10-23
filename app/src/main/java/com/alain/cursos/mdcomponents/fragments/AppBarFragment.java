@@ -61,7 +61,7 @@ public class AppBarFragment extends Fragment {
                 TopFragment.show(transaction, FullScreenDialogFragment.TAG);
                 break;
             case R.id.btnBottom:
-                FullScreenDialogFragment bottomFragment = new FullScreenDialogFragment();
+                AppBarBottomFragment bottomFragment = new AppBarBottomFragment();
                 bottomFragment.show(transaction, FullScreenDialogFragment.TAG);
                 break;
         }
