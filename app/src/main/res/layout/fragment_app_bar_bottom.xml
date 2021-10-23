@@ -25,12 +25,26 @@
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottom_app_bar"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:navigationIcon="@drawable/ic_timeline"
         app:hideOnScroll="true"
         app:menu="@menu/menu_buttom_nav"
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"/>
+        app:fabAlignmentMode="end"
+        app:fabAnimationMode="slide"
+        app:fabCradleMargin="@dimen/common_padding_default"
+        app:fabCradleRoundedCornerRadius="@dimen/common_padding_middle"
+        app:fabCradleVerticalOffset="@dimen/common_padding_default"
+        app:navigationIcon="@drawable/ic_timeline" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/black"
+        android:src="@drawable/ic_add"
+        app:layout_anchor="@id/bottom_app_bar"
+        app:tint="@android:color/white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
