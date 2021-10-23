@@ -57,7 +57,7 @@ public class AppBarFragment extends Fragment {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         switch (view.getId()){
             case R.id.btnTop:
-                FullScreenDialogFragment TopFragment = new FullScreenDialogFragment();
+                AppBarTopFragment TopFragment = new AppBarTopFragment();
                 TopFragment.show(transaction, FullScreenDialogFragment.TAG);
                 break;
             case R.id.btnBottom:
