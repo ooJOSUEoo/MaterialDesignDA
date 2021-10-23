@@ -10,8 +10,10 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.DialogFragment;
 
 import com.alain.cursos.mdcomponents.R;
+import com.alain.cursos.mdcomponents.utils.BottomAppBarCutCornersTopEdge;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.snackbar.Snackbar;
 
 import butterknife.BindView;
@@ -77,6 +79,20 @@ public class AppBarBottomFragment extends DialogFragment {
                     .setAnchorView(fab)
                     .show();
         });
+
+        BottomAppBarCutCornersTopEdge topEdge = new BottomAppBarCutCornersTopEdge(
+                bottom_app_bar.getFabCradleMargin(),
+                bottom_app_bar.getFabCradleRoundedCornerRadius(),
+                bottom_app_bar.getCradleVerticalOffset()
+        );
+
+        MaterialShapeDrawable shapeDrawable = (MaterialShapeDrawable)bottom_app_bar.getBackground();
+        shapeDrawable.setShapeAppearanceModel(
+                shapeDrawable.getShapeAppearanceModel()
+                        .toBuilder()
+                        .setTopEdge(topEdge)
+                        .build());
+
         return view;
     }
 
