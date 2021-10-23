@@ -147,4 +147,6 @@
     <string name="menu_hint_autocomplete">Autocomplete</string>
     <string name="app_bar_bottom">App Bar Bottom</string>
     <string name="app_bar_top">App Bar Top</string>
+    <string name="picker_dialog">Picker Dialog</string>
+    <string name="picker_FullScreen">Picker FullScreen</string>
 </resources>
