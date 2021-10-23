@@ -149,4 +149,5 @@
     <string name="app_bar_top">App Bar Top</string>
     <string name="picker_dialog">Picker Dialog</string>
     <string name="picker_FullScreen">Picker FullScreen</string>
+    <string name="picker_title">Seleccione una fecha</string>
 </resources>
