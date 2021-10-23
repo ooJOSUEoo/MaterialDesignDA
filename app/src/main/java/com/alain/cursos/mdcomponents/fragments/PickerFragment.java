@@ -7,12 +7,12 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.alain.cursos.mdcomponents.R;
 import com.alain.cursos.mdcomponents.utils.Component;
 import com.alain.cursos.mdcomponents.utils.Constants;
 import com.google.android.material.datepicker.MaterialDatePicker;
+import com.google.android.material.snackbar.Snackbar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -59,15 +59,28 @@ public class PickerFragment extends Fragment {
     }
     @OnClick({R.id.btnDialog, R.id.btnFullScreen})
     public void onViewClicked(View view){
+        MaterialDatePicker.Builder<Long> builder = MaterialDatePicker.Builder.datePicker();
+        builder.setTitleText(R.string.picker_title);
+        builder.setSelection(System.currentTimeMillis());
+
         switch (view.getId()){
             case R.id.btnDialog:
-                MaterialDatePicker.Builder<Long> builder = MaterialDatePicker.Builder.datePicker();
-                builder.setTitleText(R.string.picker_title);
                 builder.setTheme(R.style.ThemeOverlay_MaterialComponents_MaterialCalendar);
-                MaterialDatePicker<?> picker = builder.build();
-                picker.show(getFragmentManager(), picker.toString());
                 break;
             case R.id.btnFullScreen:
+                //builder.setTheme(R.style.ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen);
+                builder.setTheme(R.style.FullScreenPicker);
                 break;
         }
+
+        MaterialDatePicker<?> picker = builder.build();
+        picker.addOnPositiveButtonClickListener(selection ->
+                //Snackbar.make(containerMain, R.string.message_action_success,Snackbar.LENGTH_LONG).show());
+                Snackbar.make(containerMain, picker.getHeaderText(),Snackbar.LENGTH_LONG).show());
+        picker.addOnNegativeButtonClickListener(dialog ->
+                Snackbar.make(containerMain, R.string.dialog_negative,Snackbar.LENGTH_LONG).show());
+        picker.addOnCancelListener(dialogInterface ->
+                Snackbar.make(containerMain, R.string.dialog_cancel,Snackbar.LENGTH_LONG).show());
+        picker.show(getFragmentManager(), picker.toString());
+    }
 }
